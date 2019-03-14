@@ -43,7 +43,7 @@ def fetch_images(picturefolder):
 
 images = fetch_images(picturefolder)
 
-stringtoimage = 'undead'
+stringtoimage = 'bros dead gend'
 
 
 def fetch_fitting_image(searchedstring, images):
@@ -63,14 +63,14 @@ def select_images(stringtoimage, images):
 
     while True:
         if remainingstring[0] == ' ':
-            print('space')
             textimages.append(('space', 'space'))
             remainingstring = remainingstring[1:]
 
         i = len(remainingstring)
         while True:
+            print(i)
             if i < 0:
-                raise Exception('no image found')
+                raise Exception('no image *{}* found'.format(remainingstring[0:i + 2]))
 
             img = fetch_fitting_image(remainingstring[0:i], images)
 
